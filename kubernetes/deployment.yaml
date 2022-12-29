@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vue3
+  labels:
+    app: vue3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vue3
+  template:
+    metadata:
+      labels:
+        app: vue3
+    spec:
+      containers:
+      - name: vue3-app
+        image: ysofficellc/vue3-aws-eks:1.0.0
+        ports:
+        - containerPort: 80
