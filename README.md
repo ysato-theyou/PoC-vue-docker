@@ -8,7 +8,7 @@
 ## 構築
 
 1. ビルド
-   * `docker build . -t ysofficellc/vue3-aws-eks:1.0.0`
+   - `docker build . -t ysofficellc/vue3-aws-eks:1.0.0`
 
 ## Docker Hub へ登録
 
@@ -19,18 +19,12 @@
 
 ## AWS EKS へデプロイ
 
-1. Vue.js 3 プロジェクトを作成
-   - `docker-compose exec app composer create-project --prefer-dist laravel/laravel laravel-aws-eks`
-2. 権限修正（環境に依るので本来は環境変数で調整するほうが良い）
-   - `sudo chown -R www-data: laravel-aws-eks/`
-3. イメージビルド
-   - `docker build -f docker/php/apache.Dockerfile laravel-aws-eks -t ysofficellc/laravel-aws-eks:v2`
-4. イメージプッシュ
-   - `docker push ysofficellc/laravel-aws-eks:v2`
+1. イメージプッシュ
+   - `docker push ysofficellc/vue3-aws-eks:v2`
 
 ### クラスター作成
 
-- `eksctl create cluster --name=laravel-kube-cluster --nodes=2 --node-type=t2.micro`
+- `eksctl create cluster --name=vue3-kube-cluster --nodes=2 --node-type=t2.micro`
   - 結構時間かかる
 
 ### Kubernetes へ kubectl を用いてデプロイする
