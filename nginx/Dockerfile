@@ -2,7 +2,6 @@ FROM node:16.19.0-alpine3.17 as build-stage
 
 WORKDIR /app
 COPY app/vue-app/package*.json ./
-COPY app/vue-app/package.lock ./
 RUN npm install
 COPY app/vue-app/ ./
 RUN npm run build
