@@ -1,6 +1,8 @@
 version: "3"
 services:
   nginx:
+    container_name: nginx
+    image: ysofficellc/vue3-aws-eks:1.0.0
     build: ./nginx
     ports:
-      - "8080:80"
+      - "18080:80"

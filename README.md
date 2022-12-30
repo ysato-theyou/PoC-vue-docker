@@ -8,19 +8,18 @@
 ## 構築
 
 1. ビルド
-   - `docker build . -t ysofficellc/vue3-aws-eks:1.0.0`
+   - `docker-compose build`
+2. 起動
+    - `docker-compose up`
 
 ## Docker Hub へ登録
 
 登録済み Docker Hub アカウントへログインしている状態で、イメージを push する
 
-- タグを `{username}/{image}` に変更後に push する
-  - `docker push ysofficellc/vue3-aws-eks:1.0.0`
+1. イメージプッシュ
+   - `docker push ysofficellc/vue3-aws-eks:1.0.0`
 
 ## AWS EKS へデプロイ
-
-1. イメージプッシュ
-   - `docker push ysofficellc/vue3-aws-eks:v2`
 
 ### クラスター作成
 
@@ -43,4 +42,5 @@
 
 ## 参考資料
 * [VueアプリケーションをDockerのNginx上で公開する](https://qiita.com/yama9112/items/3cdb4dd3ce718d2f6c4d)
+* [Docker Compose - docker-compose.yml リファレンス](https://qiita.com/zembutsu/items/9e9d80e05e36e882caaa)
 * [Deploy a Laravel App to Amazon EKS in 5 minutes](https://gbengaoni.com/blog/Deploy-a-Laravel-App-to-Amazon-EKS-in-5-minutes-a94a41436157)
