@@ -37,8 +37,7 @@
    - `kubectl get pods`
    - `kubectl get services`
      - 参考
-        ```shell
-        ```
+     ![image](https://user-images.githubusercontent.com/108514223/210063233-c4711c78-01a4-45b9-9541-fae70e731778.png)
 
 ## 参考資料
 * [VueアプリケーションをDockerのNginx上で公開する](https://qiita.com/yama9112/items/3cdb4dd3ce718d2f6c4d)
